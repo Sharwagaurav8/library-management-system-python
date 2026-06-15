@@ -19,13 +19,14 @@ def view_books():
         print(book)
     
 def search_book():
-    search = input("Enter book name to search : ")
+    search = input("Enter book name to search : ").lower()
     
-    if search in books:
-        print("Book found!")
-        
+    for book in books:
+        if search == book.lower():
+            print("✅ Book found!")
+            return
     else:
-        print("Book not found!")
+        print("❌ Book not found!")
 
 while True:
     show_menu()
