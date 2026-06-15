@@ -21,10 +21,14 @@ def view_books():
 def search_book():
     search = input("Enter book name to search : ").lower()
     
+    found = False
+    
     for book in books:
         if search == book.lower():
-            print("✅ Book found!")
-            return
+            found = True
+            break
+    if found:
+        print("✅ Book found!")
     else:
         print("❌ Book not found!")
 
