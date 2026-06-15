@@ -2,15 +2,16 @@
 
 A simple and beginner-friendly **Library Management System** built using **Python**. This is a console-based application that allows users to manage a collection of books through an interactive menu-driven interface.
 
-The project is designed to strengthen core Python concepts such as functions, lists, loops, conditional statements, and user input handling. It will continue to evolve with additional features and improvements over time.
+The project is designed to strengthen core Python concepts such as functions, lists, loops, conditional statements, and user input handling. It currently stores books in memory using a Python list and supports basic library operations.
 
 
 ## 🚀 Features
 
 * ➕ Add a new book to the library
-* 📖 View all available books
+* 📖 View all books available in the library
 * 🔍 Search for a book by its name
-* 🖥️ Simple menu-driven command-line interface
+* 🔠 Case-insensitive book search
+* 🖥️ Interactive menu-driven command-line interface
 * 🐍 Built entirely with Python
 
 
@@ -24,7 +25,7 @@ The project is designed to strengthen core Python concepts such as functions, li
 ```text
 library-management-system/
 │
-├── main.py
+├── library.py
 └── README.md
 ```
 
@@ -46,7 +47,7 @@ cd library-management-system
 3. Run the program:
 
 ```bash
-python main.py
+python library.py
 ```
 
 
@@ -62,6 +63,24 @@ python main.py
 ```
 
 
+## 📝 Example
+
+```text
+Enter your choice : 1
+Enter book name : Python Basics
+✅ Book added successfully!
+
+Enter your choice : 2
+
+Books in Library :
+Python Basics
+
+Enter your choice : 3
+Enter book name to search : python basics
+✅ Book found!
+```
+
+
 ## 📚 Concepts Practiced
 
 * Variables
@@ -69,34 +88,37 @@ python main.py
 * Functions
 * Loops
 * Conditional Statements (`if`, `elif`, `else`)
+* Boolean Variables
 * User Input
-* Basic Program Flow
-* Menu-Driven Applications
+* String Methods (`lower()`)
+* Linear Search
+* Menu-Driven Programming
 
 
 ## 🔮 Planned Future Improvements
 
-* ✏️ Update book details
-* ❌ Delete books
-* 💾 Save books to a file
-* 📂 Load books automatically on startup
-* 🆔 Add unique book IDs
-* 👤 Store author information
-* 🗄️ SQLite database integration
-* 🏗️ Object-Oriented Programming (OOP) implementation
-* 🎨 Improved user interface and validation
+* ✏️ Update existing book details
+* ❌ Delete books from the library
+* 💾 Save books to a text file
+* 📂 Automatically load saved books at startup
+* 🆔 Assign unique IDs to books
+* 👤 Store additional details such as author name
+* 📊 Display the total number of books
+* 🗄️ Store data using SQLite
+* 🏗️ Refactor the project using Object-Oriented Programming (OOP)
+* ✅ Improve input validation and user experience
 
 
 ## 🎯 Purpose
 
-This project was created as part of my Python learning journey to practice programming fundamentals by building real-world applications.
+This project was created as part of my Python learning journey to practice programming fundamentals by building a real-world console application. It serves as a foundation for implementing more advanced features and improving software development skills.
 
 
 ## 🤝 Contributions
 
-Suggestions and improvements are always welcome. Feel free to fork the repository and submit a pull request.
+Suggestions and improvements are welcome. Feel free to fork the repository, experiment with new features, and submit a pull request.
 
 
 ## 📄 License
 
-This project is open source.
+This project is open source and is intended for learning and educational purposes.
