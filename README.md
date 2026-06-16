@@ -10,9 +10,10 @@ The project demonstrates fundamental Python programming concepts such as **funct
 * ➕ Add new books to the library
 * 📖 View all books stored in the library
 * 🔍 Search for books by name
-* 🔠 Case-insensitive search using `lower()`
-* ✅ Success and error messages for user actions
-* 🖥️ Easy-to-use menu-driven command-line interface
+* ❌ Delete books from the library
+* 🔠 Case-insensitive search and deletion using `lower()`
+* ✅ User-friendly success and error messages
+* 🖥️ Interactive menu-driven command-line interface
 * 🐍 Built entirely with Python
 
 
@@ -39,7 +40,7 @@ library-management-system/
 git clone https://github.com/YOUR_USERNAME/library-management-system.git
 ```
 
-### 2. Move into the project directory
+### 2. Navigate to the project directory
 
 ```bash
 cd library-management-system
@@ -60,7 +61,8 @@ python library.py
 1. Add Book
 2. View Books
 3. Search Book
-4. Exit
+4. Delete Book
+5. Exit
 ```
 
 
@@ -68,9 +70,7 @@ python library.py
 
 ```text
 Enter your choice : 1
-
 Enter book name : Python Basics
-
 ✅ Book added successfully!
 
 Enter your choice : 2
@@ -80,13 +80,14 @@ Books in Library :
 Python Basics
 
 Enter your choice : 3
-
 Enter book name to search : python basics
-
 ✅ Book found!
 
 Enter your choice : 4
+Enter book name to delete : Python Basics
+✅ Book deleted successfully!
 
+Enter your choice : 5
 Thank you for using the Library Management System.
 ```
 
@@ -96,24 +97,21 @@ Thank you for using the Library Management System.
 * Variables
 * Lists
 * Functions
-* For Loops
-* While Loops
+* `while` Loops
+* `for` Loops
 * Conditional Statements (`if`, `elif`, `else`)
 * Boolean Variables
 * User Input (`input()`)
 * String Methods (`lower()`)
-* Membership Checking
+* List Operations (`append()` and `remove()`)
 * Linear Search
 * Menu-Driven Programming
 
 
-# 🔮 Future Improvements
-
-This project will continue to be upgraded with additional features, including:
+# 🔮 Planned Future Improvements
 
 * ✏️ Update existing book details
-* ❌ Delete books from the library
-* 💾 Save books to a file (`books.txt`)
+* 💾 Save books to a text file
 * 📂 Automatically load saved books on startup
 * 🆔 Assign unique IDs to books
 * 👤 Store author names and additional information
@@ -121,7 +119,7 @@ This project will continue to be upgraded with additional features, including:
 * 🔢 Sort books alphabetically
 * 🗄️ Integrate an SQLite database
 * 🏗️ Refactor the project using Object-Oriented Programming (OOP)
-* ✅ Improve input validation and error handling
+* ✅ Improve input validation and exception handling
 
 
 # 🎯 Purpose
