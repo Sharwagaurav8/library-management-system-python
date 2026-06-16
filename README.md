@@ -2,25 +2,26 @@
 
 A simple and beginner-friendly **Library Management System** built using **Python**. This is a console-based application that allows users to manage a collection of books through an interactive menu-driven interface.
 
-The project is designed to strengthen core Python concepts such as functions, lists, loops, conditional statements, and user input handling. It currently stores books in memory using a Python list and supports basic library operations.
+The project demonstrates fundamental Python programming concepts such as **functions, lists, loops, conditional statements, user input handling, string manipulation, and linear search algorithms**. All book records are currently stored in memory using a Python list.
 
 
-## 🚀 Features
+# 🚀 Features
 
-* ➕ Add a new book to the library
-* 📖 View all books available in the library
-* 🔍 Search for a book by its name
-* 🔠 Case-insensitive book search
-* 🖥️ Interactive menu-driven command-line interface
+* ➕ Add new books to the library
+* 📖 View all books stored in the library
+* 🔍 Search for books by name
+* 🔠 Case-insensitive search using `lower()`
+* ✅ Success and error messages for user actions
+* 🖥️ Easy-to-use menu-driven command-line interface
 * 🐍 Built entirely with Python
 
 
-## 🛠️ Technologies Used
+# 🛠️ Technologies Used
 
 * Python 3
 
 
-## 📂 Project Structure
+# 📂 Project Structure
 
 ```text
 library-management-system/
@@ -30,28 +31,28 @@ library-management-system/
 ```
 
 
-## ▶️ How to Run
+# ▶️ How to Run
 
-1. Clone the repository:
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/library-management-system.git
 ```
 
-2. Navigate to the project directory:
+### 2. Move into the project directory
 
 ```bash
 cd library-management-system
 ```
 
-3. Run the program:
+### 3. Run the application
 
 ```bash
 python library.py
 ```
 
 
-## 💻 Sample Menu
+# 💻 Sample Menu
 
 ```text
 >-----<     LIBRARY MANAGEMENT SYSTEM     >-----<
@@ -63,62 +64,76 @@ python library.py
 ```
 
 
-## 📝 Example
+# 📝 Sample Execution
 
 ```text
 Enter your choice : 1
+
 Enter book name : Python Basics
+
 ✅ Book added successfully!
 
 Enter your choice : 2
 
 Books in Library :
+
 Python Basics
 
 Enter your choice : 3
+
 Enter book name to search : python basics
+
 ✅ Book found!
+
+Enter your choice : 4
+
+Thank you for using the Library Management System.
 ```
 
 
-## 📚 Concepts Practiced
+# 📚 Python Concepts Practiced
 
 * Variables
 * Lists
 * Functions
-* Loops
+* For Loops
+* While Loops
 * Conditional Statements (`if`, `elif`, `else`)
 * Boolean Variables
-* User Input
+* User Input (`input()`)
 * String Methods (`lower()`)
+* Membership Checking
 * Linear Search
 * Menu-Driven Programming
 
 
-## 🔮 Planned Future Improvements
+# 🔮 Future Improvements
+
+This project will continue to be upgraded with additional features, including:
 
 * ✏️ Update existing book details
 * ❌ Delete books from the library
-* 💾 Save books to a text file
-* 📂 Automatically load saved books at startup
+* 💾 Save books to a file (`books.txt`)
+* 📂 Automatically load saved books on startup
 * 🆔 Assign unique IDs to books
-* 👤 Store additional details such as author name
+* 👤 Store author names and additional information
 * 📊 Display the total number of books
-* 🗄️ Store data using SQLite
+* 🔢 Sort books alphabetically
+* 🗄️ Integrate an SQLite database
 * 🏗️ Refactor the project using Object-Oriented Programming (OOP)
-* ✅ Improve input validation and user experience
+* ✅ Improve input validation and error handling
 
 
-## 🎯 Purpose
+# 🎯 Purpose
 
-This project was created as part of my Python learning journey to practice programming fundamentals by building a real-world console application. It serves as a foundation for implementing more advanced features and improving software development skills.
-
-
-## 🤝 Contributions
-
-Suggestions and improvements are welcome. Feel free to fork the repository, experiment with new features, and submit a pull request.
+This project was created as part of my Python learning journey to strengthen programming fundamentals by building a real-world console application. It serves as a foundation for implementing more advanced features such as persistent storage, databases, and object-oriented design.
 
 
-## 📄 License
+# 🤝 Contributions
 
-This project is open source and is intended for learning and educational purposes.
+Contributions, suggestions, and improvements are welcome. Feel free to fork the repository, open an issue, or submit a pull request.
+
+
+# 📄 License
+
+This project is open source and intended for learning and educational purposes.
