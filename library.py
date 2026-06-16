@@ -5,7 +5,8 @@ def show_menu():
     print("1. Add Book")
     print("2. View Books")
     print("3. Search Book")
-    print("4. Exit")
+    print("4. Delete Book")
+    print("5. Exit")
     
 def add_book():
     book = input("Enter book name : ")
@@ -31,6 +32,22 @@ def search_book():
         print("✅ Book found!")
     else:
         print("❌ Book not found!")
+        
+def delete_book():
+    search = input("Enter book name to delete: ").lower()
+
+    found = False
+
+    for book in books:
+        if search == book.lower():
+            books.remove(book)
+            found = True
+            break
+
+    if found:
+        print("✅ Book deleted successfully!")
+    else:
+        print("❌ Book not found!")
 
 while True:
     show_menu()
@@ -47,6 +64,9 @@ while True:
         search_book()
         
     elif choice == '4':
+        delete_book()
+        
+    elif choice == '5':
         print("Thank you for using the Library Management System.")
         break
     
