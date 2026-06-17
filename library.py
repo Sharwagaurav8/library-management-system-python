@@ -6,10 +6,20 @@ def show_menu():
     print("2. View Books")
     print("3. Search Book")
     print("4. Delete Book")
-    print("5. Exit")
+    print("5. Borrow Book")
+    print("6. Exit")
     
 def add_book():
-    book = input("Enter book name : ")
+    
+    name = input("Enter book name : ")
+    author = input("Enter author name : ")
+
+    book = {
+        "name": name,
+        "author": author,
+        "borrowed": False
+    }
+
     books.append(book)
     print("✅ Book added successfully!")
     
@@ -17,7 +27,10 @@ def view_books():
     print("\nBooks in Library : ")
         
     for book in books:
-        print(book)
+        print("Book Name :", book["name"])
+        print("Author    :", book["author"])
+        print("Borrowed  :", book["borrowed"])
+        print("-------------------------")
     
 def search_book():
     search = input("Enter book name to search : ").lower()
@@ -25,7 +38,7 @@ def search_book():
     found = False
     
     for book in books:
-        if search == book.lower():
+        if search == book["name"].lower():
             found = True
             break
     if found:
@@ -39,7 +52,7 @@ def delete_book():
     found = False
 
     for book in books:
-        if search == book.lower():
+        if search == book["name"].lower():
             books.remove(book)
             found = True
             break
@@ -48,6 +61,26 @@ def delete_book():
         print("✅ Book deleted successfully!")
     else:
         print("❌ Book not found!")
+        
+def borrow_book():
+    search = input("Enter book name to borrow : ").lower()
+    
+    found = False
+    
+    for book in books:
+        if search == book["name"].lower():
+            found = True
+            if not book["borrowed"]:
+                book["borrowed"] = True
+                print("✅ Book borrowed successfully!")
+                break
+            
+            elif book["borrowed"]:
+                print("❌ Book is already borrowed!")
+                break
+            
+    if not found:
+                print("❌ Book not found!")
 
 while True:
     show_menu()
@@ -67,6 +100,9 @@ while True:
         delete_book()
         
     elif choice == '5':
+        borrow_book()
+        
+    elif choice == '6':
         print("Thank you for using the Library Management System.")
         break
     
