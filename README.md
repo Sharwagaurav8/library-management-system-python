@@ -1,17 +1,23 @@
 # 📚 Library Management System
 
-A simple and beginner-friendly **Library Management System** built using **Python**. This is a console-based application that allows users to manage a collection of books through an interactive menu-driven interface.
+A simple and beginner-friendly **Library Management System** built using **Python**. This is a console-based application that allows users to manage books through an interactive menu-driven interface.
 
-The project demonstrates fundamental Python programming concepts such as **functions, lists, loops, conditional statements, user input handling, string manipulation, and linear search algorithms**. All book records are currently stored in memory using a Python list.
+The project demonstrates fundamental Python programming concepts such as **functions, lists, dictionaries, loops, conditional statements, user input handling, string manipulation, and basic data management**. Each book is stored as a dictionary containing its **name**, **author**, and **borrowed status**.
 
 
 # 🚀 Features
 
-* ➕ Add new books to the library
-* 📖 View all books stored in the library
+* ➕ Add new books with their author names
+* 📖 View all books in the library
 * 🔍 Search for books by name
 * ❌ Delete books from the library
-* 🔠 Case-insensitive search and deletion using `lower()`
+* 📚 Borrow available books
+* 🔠 Case-insensitive search, deletion, and borrowing
+* 📋 Display book details including:
+
+  * Book Name
+  * Author Name
+  * Borrow Status (`True` / `False`)
 * ✅ User-friendly success and error messages
 * 🖥️ Interactive menu-driven command-line interface
 * 🐍 Built entirely with Python
@@ -62,7 +68,8 @@ python library.py
 2. View Books
 3. Search Book
 4. Delete Book
-5. Exit
+5. Borrow Book
+6. Exit
 ```
 
 
@@ -70,25 +77,35 @@ python library.py
 
 ```text
 Enter your choice : 1
-Enter book name : Python Basics
+
+Enter book name : Python Crash Course
+Enter author name : Eric Matthes
+
 ✅ Book added successfully!
 
 Enter your choice : 2
 
 Books in Library :
 
-Python Basics
-
-Enter your choice : 3
-Enter book name to search : python basics
-✅ Book found!
-
-Enter your choice : 4
-Enter book name to delete : Python Basics
-✅ Book deleted successfully!
+Book Name : Python Crash Course
+Author    : Eric Matthes
+Borrowed  : False
+-------------------------
 
 Enter your choice : 5
-Thank you for using the Library Management System.
+
+Enter book name to borrow : python crash course
+
+✅ Book borrowed successfully!
+
+Enter your choice : 2
+
+Books in Library :
+
+Book Name : Python Crash Course
+Author    : Eric Matthes
+Borrowed  : True
+-------------------------
 ```
 
 
@@ -96,25 +113,31 @@ Thank you for using the Library Management System.
 
 * Variables
 * Lists
+* Dictionaries
 * Functions
 * `while` Loops
 * `for` Loops
 * Conditional Statements (`if`, `elif`, `else`)
-* Boolean Variables
+* Boolean Values (`True` / `False`)
 * User Input (`input()`)
 * String Methods (`lower()`)
 * List Operations (`append()` and `remove()`)
+* Dictionary Access
 * Linear Search
 * Menu-Driven Programming
 
 
-# 🔮 Planned Future Improvements
+# 🔮 Future Improvements
 
-* ✏️ Update existing book details
-* 💾 Save books to a text file
-* 📂 Automatically load saved books on startup
+This project will continue to be upgraded with additional features, including:
+
+* ✏️ Update book details
+* 🔄 Return borrowed books
+* 💾 Save library data to a file
+* 📂 Automatically load saved data at startup
 * 🆔 Assign unique IDs to books
-* 👤 Store author names and additional information
+* 📅 Track borrow and return dates
+* 👥 Support multiple users
 * 📊 Display the total number of books
 * 🔢 Sort books alphabetically
 * 🗄️ Integrate an SQLite database
@@ -124,7 +147,7 @@ Thank you for using the Library Management System.
 
 # 🎯 Purpose
 
-This project was created as part of my Python learning journey to strengthen programming fundamentals by building a real-world console application. It serves as a foundation for implementing more advanced features such as persistent storage, databases, and object-oriented design.
+This project was created as part of my Python learning journey to strengthen programming fundamentals by building a real-world console application. It serves as a foundation for implementing more advanced features such as persistent storage, databases, and object-oriented programming.
 
 
 # 🤝 Contributions
