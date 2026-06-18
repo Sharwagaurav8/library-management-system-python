@@ -7,7 +7,8 @@ def show_menu():
     print("3. Search Book")
     print("4. Delete Book")
     print("5. Borrow Book")
-    print("6. Exit")
+    print("6. Return Book")
+    print("7. Exit")
     
 def add_book():
     
@@ -25,11 +26,13 @@ def add_book():
     
 def view_books():
     print("\nBooks in Library : ")
-        
+            
     for book in books:
+        status = "Borrowed" if book["borrowed"] else "Available"
+        
         print("Book Name :", book["name"])
         print("Author    :", book["author"])
-        print("Borrowed  :", book["borrowed"])
+        print("Status    :", status)
         print("-------------------------")
     
 def search_book():
@@ -75,12 +78,32 @@ def borrow_book():
                 print("✅ Book borrowed successfully!")
                 break
             
-            elif book["borrowed"]:
+            else:
                 print("❌ Book is already borrowed!")
                 break
             
     if not found:
                 print("❌ Book not found!")
+
+def return_book():
+    search = input("Enter book name to return : ").lower()
+    
+    found = False
+    
+    for book in books:
+        if search == book["name"].lower():
+            found = True
+            if book["borrowed"]:
+                book["borrowed"] = False
+                print("✅ Book returned successfully!")
+                break
+            else:
+                print("❌ Book was not borrowed!")
+                break
+            
+    if not found:
+        print("❌ Book not found!")
+        
 
 while True:
     show_menu()
@@ -103,6 +126,9 @@ while True:
         borrow_book()
         
     elif choice == '6':
+        return_book()
+        
+    elif choice == '7':
         print("Thank you for using the Library Management System.")
         break
     
