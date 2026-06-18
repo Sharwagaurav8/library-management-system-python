@@ -2,7 +2,7 @@
 
 A simple and beginner-friendly **Library Management System** built using **Python**. This is a console-based application that allows users to manage books through an interactive menu-driven interface.
 
-The project demonstrates fundamental Python programming concepts such as **functions, lists, dictionaries, loops, conditional statements, user input handling, string manipulation, and basic data management**. Each book is stored as a dictionary containing its **name**, **author**, and **borrowed status**.
+The project demonstrates fundamental Python programming concepts such as **functions, lists, dictionaries, loops, conditional statements, user input handling, string manipulation, and basic data management**. Each book is stored as a dictionary containing its **name**, **author**, and **borrowing status**.
 
 
 # 🚀 Features
@@ -12,12 +12,13 @@ The project demonstrates fundamental Python programming concepts such as **funct
 * 🔍 Search for books by name
 * ❌ Delete books from the library
 * 📚 Borrow available books
-* 🔠 Case-insensitive search, deletion, and borrowing
-* 📋 Display book details including:
+* 🔄 Return borrowed books
+* 🔠 Case-insensitive search, deletion, borrowing, and returning
+* 📋 Display complete book details:
 
   * Book Name
   * Author Name
-  * Borrow Status (`True` / `False`)
+  * Current Status (`Available` or `Borrowed`)
 * ✅ User-friendly success and error messages
 * 🖥️ Interactive menu-driven command-line interface
 * 🐍 Built entirely with Python
@@ -37,6 +38,7 @@ library-management-system/
 └── README.md
 ```
 
+---
 
 # ▶️ How to Run
 
@@ -69,9 +71,11 @@ python library.py
 3. Search Book
 4. Delete Book
 5. Borrow Book
-6. Exit
+6. Return Book
+7. Exit
 ```
 
+---
 
 # 📝 Sample Execution
 
@@ -89,7 +93,7 @@ Books in Library :
 
 Book Name : Python Crash Course
 Author    : Eric Matthes
-Borrowed  : False
+Status    : Available
 -------------------------
 
 Enter your choice : 5
@@ -104,8 +108,14 @@ Books in Library :
 
 Book Name : Python Crash Course
 Author    : Eric Matthes
-Borrowed  : True
+Status    : Borrowed
 -------------------------
+
+Enter your choice : 6
+
+Enter book name to return : Python Crash Course
+
+✅ Book returned successfully!
 ```
 
 
@@ -122,7 +132,7 @@ Borrowed  : True
 * User Input (`input()`)
 * String Methods (`lower()`)
 * List Operations (`append()` and `remove()`)
-* Dictionary Access
+* Dictionary Access and Modification
 * Linear Search
 * Menu-Driven Programming
 
@@ -131,9 +141,8 @@ Borrowed  : True
 
 This project will continue to be upgraded with additional features, including:
 
-* ✏️ Update book details
-* 🔄 Return borrowed books
-* 💾 Save library data to a file
+* ✏️ Update existing book details
+* 💾 Save library data to a file (`books.txt`)
 * 📂 Automatically load saved data at startup
 * 🆔 Assign unique IDs to books
 * 📅 Track borrow and return dates
@@ -142,6 +151,7 @@ This project will continue to be upgraded with additional features, including:
 * 🔢 Sort books alphabetically
 * 🗄️ Integrate an SQLite database
 * 🏗️ Refactor the project using Object-Oriented Programming (OOP)
+* 🔒 Add user authentication and admin features
 * ✅ Improve input validation and exception handling
 
 
