@@ -10,6 +10,7 @@ def show_menu():
     print("6. Return Book")
     print("7. Exit")
     
+
 def add_book():
     
     name = input("Enter book name : ")
@@ -24,6 +25,7 @@ def add_book():
     books.append(book)
     print("✅ Book added successfully!")
     
+
 def view_books():
     print("\nBooks in Library : ")
             
@@ -35,73 +37,75 @@ def view_books():
         print("Status    :", status)
         print("-------------------------")
     
+
+def find_book(search):
+    for book in books:
+        if search == book["name"].lower():
+            return book
+    return None
+
 def search_book():
     search = input("Enter book name to search : ").lower()
     
-    found = False
+    book = find_book(search)
     
-    for book in books:
-        if search == book["name"].lower():
-            found = True
-            break
-    if found:
+    if book:
         print("✅ Book found!")
+        print("Book Name :", book["name"])
+        print("Author    :", book["author"])
+        print("Status    :", "Borrowed" if book["borrowed"] else "Available")
     else:
         print("❌ Book not found!")
-        
+
+
 def delete_book():
-    search = input("Enter book name to delete: ").lower()
-
-    found = False
-
-    for book in books:
-        if search == book["name"].lower():
-            books.remove(book)
-            found = True
-            break
-
-    if found:
+    search = input("Enter book name to delete : ").lower()
+    
+    book = find_book(search)
+    
+    if book:
+        books.remove(book)
         print("✅ Book deleted successfully!")
+        print("Book Name :", book["name"])
+        print("Author    :", book["author"])
+        print("Status    :", "Borrowed" if book["borrowed"] else "Available")
     else:
         print("❌ Book not found!")
-        
+
+
 def borrow_book():
     search = input("Enter book name to borrow : ").lower()
     
-    found = False
+    book = find_book(search)
     
-    for book in books:
-        if search == book["name"].lower():
-            found = True
-            if not book["borrowed"]:
-                book["borrowed"] = True
-                print("✅ Book borrowed successfully!")
-                break
-            
-            else:
-                print("❌ Book is already borrowed!")
-                break
-            
-    if not found:
-                print("❌ Book not found!")
+    if book:
+        if not book["borrowed"]:
+            book["borrowed"] = True
+            print("✅ Book borrowed successfully!")
+            print("Book Name :", book["name"])
+            print("Author    :", book["author"])
+            print("Status    :", "Borrowed" if book["borrowed"] else "Available")
+        else:
+            print("❌ Book is already borrowed!")
+    else:
+        print("❌ Book not found!")
+
 
 def return_book():
     search = input("Enter book name to return : ").lower()
     
-    found = False
-    
-    for book in books:
-        if search == book["name"].lower():
-            found = True
-            if book["borrowed"]:
-                book["borrowed"] = False
-                print("✅ Book returned successfully!")
-                break
-            else:
-                print("❌ Book was not borrowed!")
-                break
-            
-    if not found:
+    book = find_book(search)
+
+    if book:
+        if book["borrowed"]:
+            book["borrowed"] = False
+            print("✅ Book returned successfully!")
+            print("Book Name :", book["name"])
+            print("Author    :", book["author"])
+            print("Status    :", "Borrowed" if book["borrowed"] else "Available")
+        else:
+            print("❌ Book was not borrowed!")
+    else:
         print("❌ Book not found!")
         
 
