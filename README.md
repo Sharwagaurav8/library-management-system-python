@@ -2,7 +2,9 @@
 
 A simple and beginner-friendly **Library Management System** built using **Python**. This is a console-based application that allows users to manage books through an interactive menu-driven interface.
 
-The project demonstrates fundamental Python programming concepts such as **functions, lists, dictionaries, loops, conditional statements, user input handling, string manipulation, and basic data management**. Each book is stored as a dictionary containing its **name**, **author**, and **borrowing status**.
+The project demonstrates fundamental Python programming concepts such as **functions, lists, dictionaries, loops, conditional statements, reusable functions, user input handling, string manipulation, and basic data management**. Each book is stored as a dictionary containing its **name**, **author**, and **borrowing status**.
+
+The application has been structured to improve code readability and maintainability by using a reusable helper function for locating books.
 
 
 # 🚀 Features
@@ -14,11 +16,11 @@ The project demonstrates fundamental Python programming concepts such as **funct
 * 📚 Borrow available books
 * 🔄 Return borrowed books
 * 🔠 Case-insensitive search, deletion, borrowing, and returning
-* 📋 Display complete book details:
-
+* 📋 Display complete book information:
   * Book Name
   * Author Name
   * Current Status (`Available` or `Borrowed`)
+* ♻️ Reusable `find_book()` helper function to reduce duplicate code
 * ✅ User-friendly success and error messages
 * 🖥️ Interactive menu-driven command-line interface
 * 🐍 Built entirely with Python
@@ -38,7 +40,6 @@ library-management-system/
 └── README.md
 ```
 
----
 
 # ▶️ How to Run
 
@@ -75,7 +76,6 @@ python library.py
 7. Exit
 ```
 
----
 
 # 📝 Sample Execution
 
@@ -87,35 +87,25 @@ Enter author name : Eric Matthes
 
 ✅ Book added successfully!
 
-Enter your choice : 2
-
-Books in Library :
-
-Book Name : Python Crash Course
-Author    : Eric Matthes
-Status    : Available
--------------------------
-
 Enter your choice : 5
 
 Enter book name to borrow : python crash course
 
 ✅ Book borrowed successfully!
 
-Enter your choice : 2
-
-Books in Library :
-
 Book Name : Python Crash Course
 Author    : Eric Matthes
 Status    : Borrowed
--------------------------
 
 Enter your choice : 6
 
-Enter book name to return : Python Crash Course
+Enter book name to return : python crash course
 
 ✅ Book returned successfully!
+
+Book Name : Python Crash Course
+Author    : Eric Matthes
+Status    : Available
 ```
 
 
@@ -125,6 +115,8 @@ Enter book name to return : Python Crash Course
 * Lists
 * Dictionaries
 * Functions
+* Reusable Helper Functions
+* Function Return Values
 * `while` Loops
 * `for` Loops
 * Conditional Statements (`if`, `elif`, `else`)
@@ -134,6 +126,7 @@ Enter book name to return : Python Crash Course
 * List Operations (`append()` and `remove()`)
 * Dictionary Access and Modification
 * Linear Search
+* Code Reusability
 * Menu-Driven Programming
 
 
@@ -157,7 +150,7 @@ This project will continue to be upgraded with additional features, including:
 
 # 🎯 Purpose
 
-This project was created as part of my Python learning journey to strengthen programming fundamentals by building a real-world console application. It serves as a foundation for implementing more advanced features such as persistent storage, databases, and object-oriented programming.
+This project was created as part of my Python learning journey to strengthen programming fundamentals by building a real-world console application. It serves as a foundation for implementing more advanced features such as persistent storage, databases, and object-oriented programming while following cleaner coding practices.
 
 
 # 🤝 Contributions
